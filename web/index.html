@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>pigeon</title>
+<meta name="theme-color" content="#000000">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <section id="view-auth" class="view">
+    <div class="auth-inner">
+      <h1 class="brand">pigeon</h1>
+      <p class="tagline">mail at bird speed.</p>
+      <div class="auth-tabs">
+        <button id="tab-login" class="auth-tab active">return</button>
+        <button id="tab-register" class="auth-tab">new coop</button>
+      </div>
+      <div class="auth-form">
+        <input id="auth-user" class="field" placeholder="name" autocomplete="off" autocapitalize="none" spellcheck="false">
+        <input id="auth-pass" class="field" type="password" placeholder="word" autocomplete="off">
+        <div id="coop-wrap" class="hidden">
+          <div class="coop-label">tap the map to place your coop</div>
+          <canvas id="coop-map"></canvas>
+        </div>
+        <div id="auth-err" class="err"></div>
+        <button id="auth-go" class="btn">fly</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="view-mail" class="view">
+    <header class="topbar">
+      <span class="brand-sm">pigeon</span>
+      <span id="who" class="who"></span>
+      <button id="btn-compose" class="btn btn-sm">write</button>
+    </header>
+    <div id="mail-list" class="mail-list"></div>
+    <button id="btn-out" class="ghost">leave the coop</button>
+  </section>
+
+  <section id="view-compose" class="view">
+    <header class="topbar">
+      <button class="ghost back" data-back>←</button>
+      <span class="title">new letter</span>
+      <span></span>
+    </header>
+    <div class="sheet">
+      <input id="to-user" class="field" placeholder="to (coop name)" autocomplete="off" autocapitalize="none" spellcheck="false">
+      <div id="to-info" class="to-info"></div>
+      <textarea id="letter-body" class="field letter-field" placeholder="dear…" rows="8"></textarea>
+      <div id="compose-err" class="err"></div>
+      <button id="btn-send" class="btn">release the pigeon</button>
+    </div>
+  </section>
+
+  <section id="view-flight" class="view">
+    <header class="topbar">
+      <button class="ghost back" data-back>←</button>
+      <span id="flight-title" class="title"></span>
+      <span></span>
+    </header>
+    <div class="flight-wrap">
+      <canvas id="flight-map"></canvas>
+      <div id="flight-stats" class="flight-stats"></div>
+    </div>
+  </section>
+
+  <section id="view-letter" class="view">
+    <header class="topbar">
+      <button class="ghost back" data-back>←</button>
+      <span id="letter-title" class="title"></span>
+      <span></span>
+    </header>
+    <div class="letter-scroll">
+      <div id="letter-card" class="letter-card"></div>
+      <div id="letter-meta" class="letter-meta"></div>
+    </div>
+  </section>
+
+</div>
+
+<script src="land.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
