@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "pigeon",
+    "slug": "pigeon",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "pigeon",
+    "owner": "kreatix",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/f811665f-19e7-4374-a99b-f5ff6ba0e5cb"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "dev.kreatix.pigeon"
+    },
+    "android": {
+      "package": "dev.kreatix.pigeon",
+      "adaptiveIcon": {
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store"
+    ],
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "f811665f-19e7-4374-a99b-f5ff6ba0e5cb"
+      }
+    }
+  }
+}
